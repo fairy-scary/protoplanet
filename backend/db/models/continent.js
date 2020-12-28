@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     continentName: DataTypes.STRING
   }, {});
   Continent.associate = function(models) {
-    // associations can be defined here
+    Continent.hasMany(models.Post, { foreignKey: 'continentId' })
   };
   return Continent;
 };

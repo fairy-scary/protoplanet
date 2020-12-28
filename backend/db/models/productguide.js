@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     shippingPolicy: DataTypes.TEXT
   }, {});
   ProductGuide.associate = function(models) {
-    // associations can be defined here
+    ProductGuide.belongsTo(models.Shop, { foreignKey: 'shopId'});
   };
   return ProductGuide;
 };

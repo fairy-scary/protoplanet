@@ -8,7 +8,9 @@ module.exports = (sequelize, DataTypes) => {
     awsUrl: DataTypes.TEXT
   }, {});
   Post.associate = function(models) {
-    // associations can be defined here
+    Post.hasMany(models.Product, { foreignKey: 'postId'});
+    Post.belongsTo(models.Shop, { foreignKey: 'shopId'});
+    Post.belongsTo(models.Continent, { foreignKey: 'continentId'});
   };
   return Post;
 };

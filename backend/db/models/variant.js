@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     productId: DataTypes.INTEGER
   }, {});
   Variant.associate = function(models) {
-    // associations can be defined here
+    Variant.belongsTo(models.Product, { foreignKey: 'productId' });
   };
   return Variant;
 };
