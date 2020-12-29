@@ -14,5 +14,5 @@ module.exports = (sequelize, DataTypes) => {
     Shop.hasOne(models.User, { foreignKey: 'shopId'});
     Shop.belongsTo(models.User, { foreignKey: 'userId'});
   };
-  return Shop;
+  return Shop; 
 };

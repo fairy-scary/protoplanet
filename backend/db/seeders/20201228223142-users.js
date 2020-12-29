@@ -9,19 +9,19 @@ module.exports = {
         email: 'mrmouse@user.io',
         username: 'mr_mouse',
         hashedPassword: bcrypt.hashSync('password'),
-        shopId: 2
+        shopId: 1
       },
       {
         email: faker.internet.email(),
         username: 'amy_sedaris',
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
-        shopId: 3
+        shopId: 2
       },
       {
         email: faker.internet.email(),
         username: 'leslie_hall',
         hashedPassword: bcrypt.hashSync(faker.internet.password()),
-        shopId: 4
+        shopId: 3
       },
     ], {});
   },

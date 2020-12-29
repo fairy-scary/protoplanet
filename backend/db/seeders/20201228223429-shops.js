@@ -5,7 +5,7 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Shops', [
       {
-        userId: 7,
+        userId: 10,
         shopName: "Magic Mouse House",
         makerName: "Mr. Mouse",
         shopBio: "Welcome to Mr Mouse's Magic Mouse House!",
@@ -15,7 +15,7 @@ module.exports = {
       },
 
       {
-        userId: 8,
+        userId: 11,
         shopName: "Strangers with Candy",
         makerName: "Amy Sedaris",
         shopBio: "You probably have only seen me on The Mandalorian, but I'm also really into crafts!",
@@ -25,7 +25,7 @@ module.exports = {
       },
 
       {
-        userId: 9,
+        userId: 12,
         shopName: "Craft Talk",
         makerName: "Leslie Hall",
         shopBio: "I make crafts that you desire. All you want to do is acquire",
