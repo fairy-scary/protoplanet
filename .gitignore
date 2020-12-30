@@ -2,4 +2,34 @@ node_modules
 .env
 build
 .DS_Store
-sandbox.js
+sandbox.js'use strict';
+
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    'use strict';
+
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.bulkInsert('', [
+      {
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+    ], {});
+  },
+
+  down: (queryInterface, Sequelize) => {
+    const Op = Sequelize.Op;
+    return queryInterface.bulkDelete('', {
+      shopId: { [Op.in]: [2, 3, 4] }
+    }, {});
+  }
+};
+
+  },
+
+  down: (queryInterface, Sequelize) => {
+    
+  }
+};
