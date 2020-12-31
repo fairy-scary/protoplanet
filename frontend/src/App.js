@@ -5,6 +5,7 @@ import SignupFormPage from "./components/SignupFormPage";
 // import LoginFormPage from "./components/LoginFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
+import ContinentFeedPage from "./components/ContinentFeedPage"
 
 function App() {
   const dispatch = useDispatch();
@@ -23,6 +24,9 @@ function App() {
           </Route> */}
           <Route path="/signup">
             <SignupFormPage />
+          </Route>
+          <Route path={["/feeds/cottagedam","/feeds/alchemis","/feeds/liminaland","/feeds/bubblebopia","/feeds/yesterway","/feeds/voidend", "/feeds/honeydoe"]}>
+            <ContinentFeedPage />
           </Route>
         </Switch>
       )}
