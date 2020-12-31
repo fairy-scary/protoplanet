@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sessionRouter = require('./session.js');
 const usersRouter = require('./users.js');
 const shopRouter = require('./shop.js');
-const postsRouter = require('./posts.js');
+const feedsRouter = require('./feeds.js');
 
 router.use('/session', sessionRouter);
 
@@ -10,7 +10,7 @@ router.use('/users', usersRouter);
 
 router.use('/shop', shopRouter);
 
-router.use('/posts', postsRouter);
+router.use('/feeds', feedsRouter);
 
 module.exports = router;
 

@@ -5,10 +5,40 @@ const { handleValidationErrors } = require('../../utils/validation');
 
 
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
-const { User } = require('../../db/models');
+const { User, Order, Favorite } = require('../../db/models');
 
 const router = express.Router();
 
+router.get('/', asyncHandler(async(req, res) => {
+  const users = await User.findAll();
+  res.json({ users });
+}));
+
+router.get('/:id', asyncHandler(async(req, res) => {
+  const userId = parseInt(req.params.id, 10);
+  const user = await User.findByPk(userId);
+  res.json({ user });
+}));
+
+router.get('/:id/orders', asyncHandler(async(req, res) => {
+  const userId = parseInt(req.params.id, 10);
+  const orders = await Order.findAll({
+    where: {
+      userId: userId
+    }
+  });
+  res.json({ orders })
+}));
+
+router.get('/:id/favorites', asyncHandler(async(req, res) => {
+  const userId = parseInt(req.params.id, 10);
+  const favorites = await Favorite.findAll({
+    where: {
+      userId: userId
+    }
+});
+  res.json({ favorites })
+}));
 
 const validateSignup = [
     check('email')
