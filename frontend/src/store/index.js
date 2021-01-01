@@ -1,9 +1,12 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import session from './session'
+import session from './session';
+import continents from './continents';
 
-const rootReducer = combineReducers({
-  session
+
+const rootReducer = combineReducers({ 
+  session,
+  continents
 });
 
 let enhancer;
@@ -22,4 +25,4 @@ const configureStore = (preloadedState) => {
 };
 
 export default configureStore;
- 
+  

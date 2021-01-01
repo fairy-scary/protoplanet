@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
+    "dispatch": "^1.0.2",
     "js-cookie": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -40,6 +41,5 @@
   "devDependencies": {
     "redux-logger": "^3.0.6"
   },
-  
   "proxy": "http://localhost:5005/"
 }

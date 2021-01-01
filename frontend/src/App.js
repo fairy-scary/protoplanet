@@ -5,11 +5,17 @@ import SignupFormPage from "./components/SignupFormPage";
 // import LoginFormPage from "./components/LoginFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
-import ContinentFeedPage from "./components/ContinentFeedPage"
+import Cottagedam from "./components/Continents/Cottagedam";
+import Alchemis from "./components/Continents/Alchemis";
+import Liminaland from "./components/Continents/Liminaland";
+import Bubblebopia from "./components/Continents/Bubblebopia";
+import Yesterway from "./components/Continents/Yesterway";
+import Voidend from "./components/Continents/Voidend";
+import Honeydoe from "./components/Continents/Honeydoe";
 
 function App() {
   const dispatch = useDispatch();
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false); 
   useEffect(() => {
     dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
   }, [dispatch]);
@@ -25,8 +31,26 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
-          <Route path={["/feeds/cottagedam","/feeds/alchemis","/feeds/liminaland","/feeds/bubblebopia","/feeds/yesterway","/feeds/voidend", "/feeds/honeydoe"]}>
-            <ContinentFeedPage />
+          <Route path="/feeds/cottagedam">
+            <Cottagedam />
+          </Route>
+          <Route path="/feeds/alchemis">
+            <Alchemis />
+          </Route>
+          <Route path="/feeds/liminaland">
+            <Liminaland />
+          </Route>
+          <Route path="/feeds/bubblebopia">
+            <Bubblebopia />
+          </Route>
+          <Route path="/feeds/yesterway">
+            <Yesterway />
+          </Route>
+          <Route path="/feeds/voidend">
+            <Voidend />
+          </Route>
+          <Route path="/feeds/honeydoe">
+            <Honeydoe />
           </Route>
         </Switch>
       )}

@@ -1,0 +1,6 @@
+
+-The linter was giving me a useEfftect dispatch dependency error, so I added that.
+-It was also throwing an error saying that useEffect should be SYNC, not async.
+-has some refactoring based on HP and grocery store projects
+-logs: currentPosts = undefined, 
+-the server error goes away when I remove async, confused about how I would use it inside with 
