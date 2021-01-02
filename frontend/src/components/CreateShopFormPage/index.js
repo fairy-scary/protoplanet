@@ -16,20 +16,20 @@ const TextInput = ({ label, ...props }) => {
   );
 };
 
-const TextAreaInput = ({ label, ...props }) => {
-  const [field, meta] = useField({props, type: 'textarea'});
-  return (
-    <>
-      <label htmlFor={props.id || props.name}>{label}</label>
-      <input type="textarea" className="textarea-input" {...field} {...props} />
-      {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
-      ) : null}
-    </>
-  );
-};
+// const TextAreaInput = ({ label, ...props }) => {
+//   const [field, meta] = useField({props, type: 'textarea'});
+//   return (
+//     <>
+//       <label htmlFor={props.id || props.name}>{label}</label>
+//       <input type="textarea" className="textarea-input" {...field} {...props} />
+//       {meta.touched && meta.error ? (
+//         <div className="error">{meta.error}</div>
+//       ) : null}
+//     </>
+//   );
+// };
 
-// And now we can use these
+
 const CreateShopFormPage = () => {
   const dispatch = useDispatch();
   const currentShop = useSelector(state => state.shops);
@@ -58,7 +58,7 @@ const CreateShopFormPage = () => {
           awsUrl: Yup.string()
           .required('Required'),
         })}
-        onSubmit={(values, { setSubmitting }) => {
+        onSubmit={(values) => {
             console.log(values);
             dispatch(addShop(values))
             }
@@ -77,7 +77,7 @@ const CreateShopFormPage = () => {
             type="text"
             placeholder="Steve and Eleanor Zissou"
           />
-          <TextAreaInput
+          <TextInput
             label="Shop Bio"
             name="shopBio"
             type="textarea"

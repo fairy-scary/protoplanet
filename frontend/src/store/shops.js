@@ -10,19 +10,14 @@ export const setShop = (shopData) => {
     };
 };
 
-export const addShop = () => {
+export const addShop = (shopData) => {
     return async (dispatch) => {
         const res = await fetch("api/shop/createshop", {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            // body: JSON.stringify(shop) // body data type must match "Content-Type" header
-          });
-        dispatch(
-            setShop(res.data.shop)
-        );
-        console.log(res.data.shop)
+            body: JSON.stringify(shopData),
+        });
+        dispatch(setShop(shopData))
+        //return await res.json();
     };
 };
 
