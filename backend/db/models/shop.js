@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     shopName: DataTypes.STRING,
     makerName: DataTypes.STRING,
-    shopBio: DataTypes.TEXT
+    shopBio: DataTypes.TEXT,
+    awsUrl: DataTypes.STRING
   }, {});
   Shop.associate = function(models) {
     Shop.hasMany(models.Product, { foreignKey: 'shopId'});

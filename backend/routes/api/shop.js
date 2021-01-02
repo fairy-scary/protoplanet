@@ -20,14 +20,16 @@ router.get('/:shopId', asyncHandler(async(req, res) => {
 }));
 
 router.post('/createshop', asyncHandler(async(req, res) => {
-    const { shopName, makerName, shopBio, awsUrl } = req.body;
+    const { userId, shopName, makerName, shopBio, awsUrl } = req.body;
 
     const shop = Shop.create({
+        userId,
         shopName,
         makerName,
         shopBio,
         awsUrl,
     });
+    res.json({ shop })
 }));
 
 router.post('/:shopId/delete', asyncHandler(async(req, res) => {

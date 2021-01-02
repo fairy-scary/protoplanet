@@ -2,7 +2,7 @@ import { fetch } from "./csrf.js";
 
 const SET_COTTAGEDAM_POSTS = "continents/setCottagedamPosts";
 
-const setCottagedamPosts = (posts) => {
+const setCottagedamPosts = (posts) => { 
     return{
         type: SET_COTTAGEDAM_POSTS,
         posts: posts,
