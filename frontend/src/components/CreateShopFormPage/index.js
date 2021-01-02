@@ -33,18 +33,19 @@ const TextInput = ({ label, ...props }) => {
 const CreateShopFormPage = () => {
   const dispatch = useDispatch();
   const currentShop = useSelector(state => state.shops);
+  const userId = useSelector(state => state.session.user.id)
   console.log(currentShop)
-
 
   return (
     <>
       <h1>Create Shop</h1>
       <Formik
         initialValues={{
+          userId: userId,
           shopName: '',
           makerName: '',
           shopBio: '',
-          awsUrl: false
+          awsUrl: '',
         }}
         validationSchema={Yup.object({
           shopName: Yup.string()
@@ -56,7 +57,7 @@ const CreateShopFormPage = () => {
           shopBio: Yup.string()
             .required('Required'),
           awsUrl: Yup.string()
-          .required('Required'),
+            .required('Required'),
         })}
         onSubmit={(values) => {
             console.log(values);
