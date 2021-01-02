@@ -28,6 +28,7 @@ router.post('/createshop', asyncHandler(async(req, res) => {
         shopBio,
         awsUrl,
     });
+    res.json({ shop })
 }));
 
 router.post('/:shopId/delete', asyncHandler(async(req, res) => {

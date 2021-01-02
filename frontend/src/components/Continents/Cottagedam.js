@@ -20,7 +20,7 @@ const Cottagedam = () => {
     const currentPosts = useSelector(state => state.continents);
     console.log(currentPosts)
     
-    useEffect(() => {
+    useEffect(() => { 
         dispatch(fetchCottagedamPosts());
     }, [dispatch]);
     
