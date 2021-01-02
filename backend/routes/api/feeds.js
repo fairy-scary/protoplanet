@@ -5,8 +5,19 @@ const asyncHandler = require('express-async-handler');
 const { Post } = require('../../db/models');
 
 router.get(['/', '/all'], asyncHandler(async(req, res) => {
-   const allPosts = await Post.findAll();
+   const allPosts = await Post.findAll({
+      order: [['createdAt', 'ASC']]
+   });
    res.json({ allPosts })
+}));
+
+//rewrite -- not tested!!
+router.get('/:continentId', asyncHandler(async(req, res) => {
+   const contId = parseInt(req.params.id, 10);
+   const continent = await Post.findByPk(contId, {
+      order: [['createdAt', 'ASC']]
+   });
+   res.json({ continent });
 }));
 
 router.get('/cottagedam', asyncHandler(async(req, res) => {

@@ -9,6 +9,34 @@ router.get(['/', '/all'], asyncHandler(async(req, res) => {
     res.json({ allShops });
 }));
 
+router.get('/:shopId', asyncHandler(async(req, res) => {
+    const shopID = parseInt(req.params.shopId, 10);
+    const myShop = await Shop.findAll({
+        where: {
+            shopId: shopId
+        }
+    });
+    res.json({ myShop });
+}));
+
+router.post('/createshop', asyncHandler(async(req, res) => {
+    const { shopName, makerName, shopBio, awsUrl } = req.body;
+
+    const shop = Shop.create({
+        shopName,
+        makerName,
+        shopBio,
+        awsUrl,
+    });
+}));
+
+router.post('/:shopId/delete', asyncHandler(async(req, res) => {
+    const shopId = parseInt(req.params.shopId, 10);
+    const shop = await Shop.findByPk(shopId);
+    await shop.destroy();
+    res.redirect('/createshop');
+}));
+
 router.get('/:shopId/posts', asyncHandler(async(req, res) => {
     const shopId = parseInt(req.params.shopId, 10);
     const shopPosts = await Post.findAll({
@@ -26,7 +54,7 @@ router.get('/:shopId/products', asyncHandler(async(req, res) => {
             shopId: shopId
         }
     });
-    res.json({ allShopProducts })
+    res.json({ allShopProducts });
 }));
 
 router.get('/:shopId/products/:postId', asyncHandler(async(req, res) => {
@@ -38,7 +66,7 @@ router.get('/:shopId/products/:postId', asyncHandler(async(req, res) => {
             postId: postId
         }
     });
-    res.json({ postProducts })
+    res.json({ postProducts });
 }));
 
 module.exports = router;

@@ -1,6 +1,8 @@
+I need to just change one column of data in a seeder, but have a lot of PK references going around so don't want to unseed 
 
--The linter was giving me a useEfftect dispatch dependency error, so I added that.
--It was also throwing an error saying that useEffect should be SYNC, not async.
--has some refactoring based on HP and grocery store projects
--logs: currentPosts = undefined, 
--the server error goes away when I remove async, confused about how I would use it inside with 
+SOLUTION: Make goal to have post creation form working today!
+
+TO-DOs:
+-Add validation to /createshop api route
+-DRY up continents api route
+-

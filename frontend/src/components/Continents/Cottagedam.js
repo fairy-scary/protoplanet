@@ -8,7 +8,7 @@ const Post = ({thePost}) => {
     return ( 
         <div>
             <h3>{thePost.title}</h3>
-            <img src={thePost.awsUrl} alt="test" />
+            <img src={thePost.awsUrl} width="500px" alt="test" />
             <p>{thePost.body}</p>
         </div>
     );
