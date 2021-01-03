@@ -4,7 +4,6 @@ import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 // import LoginFormPage from "./components/LoginFormPage";
 import * as sessionActions from "./store/session";
-import Navigation from "./components/Navigation";
 import Cottagedam from "./components/Continents/Cottagedam";
 import Alchemis from "./components/Continents/Alchemis";
 import Liminaland from "./components/Continents/Liminaland";
@@ -14,6 +13,7 @@ import Voidend from "./components/Continents/Voidend";
 import Honeydoe from "./components/Continents/Honeydoe";
 import CreateShopFormPage from "./components/CreateShopFormPage";
 import ShopAdminPage from "./components/ShopAdminPage";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   const dispatch = useDispatch();
@@ -24,7 +24,10 @@ function App() {
 
   return (
     <>
-      <Navigation isLoaded={isLoaded} />
+    <div id="App">
+      <Sidebar isLoaded={isLoaded} pageWrapId={"page-wrap"} outerContainerId={"App"} />
+      <div id="page-wrap">
+      {/* <Navigation isLoaded={isLoaded} /> */}
       {isLoaded && (
         <Switch>
           {/* <Route path="/login" >
@@ -62,6 +65,8 @@ function App() {
           </Route>
         </Switch>
       )}
+      </div>
+    </div>
     </>
   );
 }
