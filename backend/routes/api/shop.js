@@ -9,11 +9,11 @@ router.get(['/', '/all'], asyncHandler(async(req, res) => {
     res.json({ allShops });
 }));
 
-router.get('/:shopId', asyncHandler(async(req, res) => {
-    const shopID = parseInt(req.params.shopId, 10);
+router.get('/:userId', asyncHandler(async(req, res) => {
+    const user = parseInt(req.params.userId, 10);
     const myShop = await Shop.findAll({
         where: {
-            shopId: shopId
+           userId: user
         }
     });
     res.json({ myShop });

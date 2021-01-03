@@ -12,13 +12,13 @@ router.get(['/', '/all'], asyncHandler(async(req, res) => {
 }));
 
 //rewrite -- not tested!!
-router.get('/:continentId', asyncHandler(async(req, res) => {
-   const contId = parseInt(req.params.id, 10);
-   const continent = await Post.findByPk(contId, {
-      order: [['createdAt', 'ASC']]
-   });
-   res.json({ continent });
-}));
+// router.get('/:continentId', asyncHandler(async(req, res) => {
+//    const contId = parseInt(req.params.id, 10);
+//    const continent = await Post.findByPk(contId, {
+//       order: [['createdAt', 'ASC']]
+//    });
+//    res.json({ continent });
+// }));
 
 router.get('/cottagedam', asyncHandler(async(req, res) => {
     const cottagedamPosts = await Post.findAll({

@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import {useEffect} from "react"; 
 import {useDispatch, useSelector} from "react-redux";
 import {fetchCottagedamPosts} from "../../store/continents";
 
@@ -23,7 +23,6 @@ const Cottagedam = () => {
     useEffect(() => { 
         dispatch(fetchCottagedamPosts());
     }, [dispatch]);
-    
 
     return (
     <div id="continent-feed">

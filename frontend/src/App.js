@@ -12,7 +12,8 @@ import Bubblebopia from "./components/Continents/Bubblebopia";
 import Yesterway from "./components/Continents/Yesterway";
 import Voidend from "./components/Continents/Voidend";
 import Honeydoe from "./components/Continents/Honeydoe";
-import CreateShopFormPage from "./components/CreateShopFormPage"
+import CreateShopFormPage from "./components/CreateShopFormPage";
+import ShopAdminPage from "./components/ShopAdminPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/createshop">
             <CreateShopFormPage />
+          </Route>
+          <Route path="/admin">
+            <ShopAdminPage />
           </Route>
           <Route path="/feeds/cottagedam">
             <Cottagedam />
