@@ -1,7 +1,8 @@
 import {useEffect} from "react"; 
 import {useDispatch, useSelector} from "react-redux";
 import {fetchUserInfo} from "../../store/user";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import * as sessionActions from '../../store/session';
 
 const LoggedInUserContainer = () => {
 
@@ -11,7 +12,12 @@ const LoggedInUserContainer = () => {
 
     useEffect(() => {
         dispatch(fetchUserInfo(user.id));  
-    }, [dispatch]);
+    });
+
+    const logout = (e) => {
+        e.preventDefault();
+        dispatch(sessionActions.logout());
+      };
 
     return (
     <div>
@@ -34,6 +40,7 @@ const LoggedInUserContainer = () => {
             {!user.shopId &&
             <Link to="/createShop">Create Shop</Link>}
             </div>
+            <button onClick={logout}>Log Out</button>
             </div>
         </div>}
     {!user && <h3>Loading...</h3>}

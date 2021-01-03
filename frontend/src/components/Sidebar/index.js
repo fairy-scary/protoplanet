@@ -3,6 +3,7 @@ import './Sidebar.css';
 import { useSelector } from 'react-redux';
 import LoggedInUserContainer from '../LoggedInUserContainer'
 import {Link} from 'react-router-dom';
+import LoginFormModal from '../LoginFormModal';
 
 const Sidebar = ({isLoaded}) => {
     const sessionUser = useSelector(state => state.session.user);
@@ -18,6 +19,7 @@ const Sidebar = ({isLoaded}) => {
       sessionLinks = (
         <>
           <Link to="/signup">Sign Up</Link>
+          <LoginFormModal />
         </>
       );
     }
