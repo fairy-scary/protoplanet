@@ -1,6 +1,6 @@
 import {useEffect} from "react"; 
 import {useDispatch, useSelector} from "react-redux";
-import {fetchCottagedamPosts} from "../../store/continents";
+import {fetchContinent} from "../../store/continents";
 
 
 const Post = ({thePost}) => {
@@ -21,7 +21,7 @@ const Cottagedam = () => {
     console.log(currentPosts)
     
     useEffect(() => { 
-        dispatch(fetchCottagedamPosts());
+        dispatch(fetchContinent(8));
     }, [dispatch]);
 
     return (

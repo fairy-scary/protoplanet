@@ -35,10 +35,9 @@ const LoggedInUserContainer = () => {
             </div>
             <div>
             <div>
-            {user.shopId && 
-            <Link to ="/admin">Shop Admin</Link>}
-            {!user.shopId &&
-            <Link to="/createShop">Create Shop</Link>}
+            <Link to ="/admin">Shop Admin</Link>
+            {/* Ran into db issue with ternery */}
+            <Link to="/createShop">Create Shop</Link>
             </div>
             <button onClick={logout}>Log Out</button>
             </div>
