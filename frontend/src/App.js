@@ -14,6 +14,7 @@ import Honeydoe from "./components/Continents/Honeydoe";
 import CreateShopFormPage from "./components/CreateShopFormPage";
 import ShopAdminPage from "./components/ShopAdminPage";
 import Sidebar from "./components/Sidebar";
+import HomePage from "./components/HomePage";
 
 function App() {
   const dispatch = useDispatch();
@@ -33,6 +34,9 @@ function App() {
           {/* <Route path="/login" >
             <LoginFormPage />
           </Route> */}
+          <Route exact path="/">
+            <HomePage />
+          </Route>  
           <Route path="/signup">
             <SignupFormPage />
           </Route>

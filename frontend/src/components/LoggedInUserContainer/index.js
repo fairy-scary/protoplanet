@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchUserInfo} from "../../store/user";
 import {Link} from "react-router-dom";
 import * as sessionActions from '../../store/session';
+import '../Sidebar/Sidebar.css'
 
 const LoggedInUserContainer = () => {
 
@@ -12,7 +13,7 @@ const LoggedInUserContainer = () => {
 
     useEffect(() => {
         dispatch(fetchUserInfo(user.id));  
-    });
+    }, [dispatch]);
 
     const logout = (e) => {
         e.preventDefault();
@@ -28,18 +29,18 @@ const LoggedInUserContainer = () => {
             <h5>{user.username}</h5>
             </div>
             <div id="logged-in-menu">
-            <h2>+ Favorites</h2>
-            <Link to="/feed">Feed</Link>
-            <Link to="/shopindex">Index</Link>
-            <Link to="/orders">My Orders</Link>
+            <h2>USER MENU</h2>
+            <Link className="menu-item" to="/feed">Feed</Link> <br/>
+            <Link className="menu-item" to="/shopindex">Index</Link> <br/>
+            <Link className="menu-item" to="/orders">My Orders</Link> <br/>
             </div>
             <div>
             <div>
-            <Link to ="/admin">Shop Admin</Link>
+            <Link className="menu-item" to="/admin">Shop Admin</Link> <br/>
             {/* Ran into db issue with ternery */}
-            <Link to="/createShop">Create Shop</Link>
+            <Link className="menu-item" to="/createShop">Create Shop</Link>
             </div>
-            <button onClick={logout}>Log Out</button>
+            <button onClick={logout} className="log-out">Log Out</button>
             </div>
         </div>}
     {!user && <h3>Loading...</h3>}

@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400;900&family=Lato:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&display=swap");
+
+#App {
+    font-family: 'Catamaran';
+    height: 100vh;
+  }
+
+#homepage-container{
+    background-image: url("/home/ecoautumn/appacademy/protoplanet/frontend/src/images/spaceback.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+#logo{
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    font-size: 100px;
+    background: none;
+    color: white;
+    padding: 130px 0px 0px 0px
+}

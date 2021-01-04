@@ -27,22 +27,22 @@ const Sidebar = ({isLoaded}) => {
   return (
     <Menu {...Sidebar}>
         {isLoaded && sessionLinks}
-        
-        <h2>+ Protoplanet Continents</h2>
-      <a className="menu-item" href="/feeds/cottagedam">
-      🌳 Cottagedam 🌳</a>
-      <a className="menu-item" href="/feeds/alchemis">
-      💎 Alchemis 💎</a>
-      <a className="menu-item" href="/feeds/liminaland">
-      🌪️ Liminaland 🌪️</a>
-      <a className="menu-item" href="/feeds/bubblebopia">
-      🛼 Bubblebopia 🛼</a>
-      <a className="menu-item" href="/feeds/yesterway">
-      🕰️ Yesterway 🕰️</a>
-      <a className="menu-item" href="/feeds/voidend">
-      🌑 Voidend 🌑</a>
-      <a className="menu-item" href="/feeds/honeydoe">
-      🍯 Honeydoe 🍯</a>
+        <br/>
+        <h2>CONTINENTS</h2>
+      <Link className="menu-item" to="/feeds/cottagedam">
+      🌳 Cottagedam 🌳</Link>
+      <Link className="menu-item" to="/feeds/alchemis">
+      💎 Alchemis 💎</Link>
+      <Link className="menu-item" to="/feeds/liminaland">
+      🌪️ Liminaland 🌪️</Link>
+      <Link className="menu-item" to="/feeds/bubblebopia">
+      🛼 Bubblebopia 🛼</Link>
+      <Link className="menu-item" to="/feeds/yesterway">
+      🕰️ Yesterway 🕰️</Link>
+      <Link className="menu-item" to="/feeds/voidend">
+      🌑 Voidend 🌑</Link>
+      <Link className="menu-item" to="/feeds/honeydoe">
+      🍯 Honeydoe 🍯</Link>
     </Menu>
   );
 };

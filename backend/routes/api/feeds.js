@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 const asyncHandler = require('express-async-handler');
 
-const { Post } = require('../../db/models');
+const { Post, Continent } = require('../../db/models');
 
 router.get(['/', '/all'], asyncHandler(async(req, res) => {
    const allPosts = await Post.findAll({
@@ -22,6 +22,10 @@ router.get('/:continentId', asyncHandler(async(req, res) => {
    res.json({ continentPosts });
 }));
 
+router.get('/continents', asyncHandler(async(req, res) => {
+   const list = await Continent.findAll();
+   res.json({ list });
+}));
 // router.get('/cottagedam', asyncHandler(async(req, res) => {
 //     const cottagedamPosts = await Post.findAll({
 //        where: {
