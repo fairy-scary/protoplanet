@@ -13,7 +13,7 @@ const LoggedInUserContainer = () => {
 
     useEffect(() => {
         dispatch(fetchUserInfo(user.id));  
-    }, [dispatch]);
+    }, [dispatch, user.id]);
 
     const logout = (e) => {
         e.preventDefault();
@@ -30,8 +30,8 @@ const LoggedInUserContainer = () => {
             </div>
             <div id="logged-in-menu">
             <h2>USER MENU</h2>
-            <Link className="menu-item" to="/feed">Feed</Link> <br/>
-            <Link className="menu-item" to="/shopindex">Index</Link> <br/>
+            <Link className="menu-item" to="/feed">Favorites Feed</Link> <br/>
+            <Link className="menu-item" to="/shopindex">Shop Index</Link> <br/>
             <Link className="menu-item" to="/orders">My Orders</Link> <br/>
             </div>
             <div>

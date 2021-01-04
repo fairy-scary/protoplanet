@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
-// import LoginFormPage from "./components/LoginFormPage";
+import LoginFormPage from "./components/LoginFormPage";
 import * as sessionActions from "./store/session";
 import Cottagedam from "./components/Continents/Cottagedam";
 import Alchemis from "./components/Continents/Alchemis";
@@ -28,15 +28,14 @@ function App() {
     <div id="App">
       <Sidebar isLoaded={isLoaded} pageWrapId={"page-wrap"} outerContainerId={"App"} />
       <div id="page-wrap">
-      {/* <Navigation isLoaded={isLoaded} /> */}
       {isLoaded && (
         <Switch>
-          {/* <Route path="/login" >
-            <LoginFormPage />
-          </Route> */}
           <Route exact path="/">
             <HomePage />
-          </Route>  
+          </Route> 
+          <Route path="/login">
+            <LoginFormPage />
+          </Route> 
           <Route path="/signup">
             <SignupFormPage />
           </Route>

@@ -32,7 +32,7 @@ const ShopAdminPage = () => {
 
     useEffect(() => {
         dispatch(myShopInfo(userId));  
-    }, [dispatch]);
+    }, [dispatch, userId]);
 
     return (
     <div className="shop-admin">

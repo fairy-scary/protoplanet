@@ -3,7 +3,6 @@ import './Sidebar.css';
 import { useSelector } from 'react-redux';
 import LoggedInUserContainer from '../LoggedInUserContainer'
 import {Link} from 'react-router-dom';
-import LoginFormModal from '../LoginFormModal';
 
 const Sidebar = ({isLoaded}) => {
     const sessionUser = useSelector(state => state.session.user);
@@ -17,9 +16,10 @@ const Sidebar = ({isLoaded}) => {
       );
     } else {
       sessionLinks = (
-        <>
+        <> 
+          <Link className="menu-item" to="/login">Log in</Link>
+          <p>or</p>
           <Link className="menu-item" to="/signup">Sign Up</Link><br/>
-          <LoginFormModal className="log-out" />
         </>
       );
     }
@@ -43,6 +43,10 @@ const Sidebar = ({isLoaded}) => {
       🌑 Voidend 🌑</Link>
       <Link className="menu-item" to="/feeds/honeydoe">
       🍯 Honeydoe 🍯</Link>
+      <br/>
+      <Link className="menu-item" to="/">
+      🪐
+      </Link>
     </Menu>
   );
 };
