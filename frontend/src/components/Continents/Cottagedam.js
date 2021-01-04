@@ -1,12 +1,12 @@
 import {useEffect} from "react"; 
 import {useDispatch, useSelector} from "react-redux";
 import {fetchContinent} from "../../store/continents";
-
+import './continents.css'
 
 const Post = ({thePost}) => {
 
     return ( 
-        <div>
+        <div id="post">
             <h3>{thePost.title}</h3>
             <img src={thePost.awsUrl} width="500px" alt="test" />
             <p>{thePost.body}</p>
@@ -25,7 +25,7 @@ const Cottagedam = () => {
     }, [dispatch]);
 
     return (
-    <div id="continent-feed">
+    <div id="cottagedam">
     <h1>Cottagedam</h1>
     {!currentPosts && <h3>Loading...</h3>}
     {currentPosts && currentPosts.map(post => {

@@ -36,7 +36,7 @@ router.post('/:shopId/delete', asyncHandler(async(req, res) => {
     const shopId = parseInt(req.params.shopId, 10);
     const shop = await Shop.findByPk(shopId);
     await shop.destroy();
-    res.redirect('/createshop');
+    res.redirect('/')
 }));
 
 router.get('/:shopId/posts', asyncHandler(async(req, res) => {

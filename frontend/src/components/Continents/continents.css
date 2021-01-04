@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100;400;900&family=Lato:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&display=swap");
+
+
+h1 {
+    font-size: 80px;
+    color: white;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding: 70px 0px 10px 0px;
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    color: white;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    color: white;
+}
+
+#cottagedam {
+    background-color: #83B64F ;
+}
+
+#alchemis {
+    background-color: #0173B3 ;
+}
+
+#bubblebopia {
+    background-color: #b83f74 ;
+}
+
+#honeydoe {
+    background-color: #C99225 ;
+}
+
+#liminaland {
+    background-color: #758e96 ;
+}
+
+#voidend {
+    background-color: #000000 ;
+}
+
+#yesterway {
+    background-color: #5C3F36 ;
+}
+
+#post {
+    padding: 0px 0px 30px 0px;
+    border-top: 10px white dashed;
+}

@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import {addShop} from '../../store/shops';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
+import './createshop.css';
+import "../Continents/continents.css";
 
 const TextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
@@ -37,7 +39,7 @@ const CreateShopFormPage = () => {
   console.log(currentShop)
 
   return (
-    <>
+    <div className="create-shop">
       <h1>Create Shop</h1>
       <Formik
         initialValues={{
@@ -71,29 +73,29 @@ const CreateShopFormPage = () => {
             name="shopName"
             type="text"
             placeholder="The Life Aquatic"
-          />
+          /><br/>
           <TextInput
             label="Maker Name(s)"
             name="makerName"
             type="text"
             placeholder="Steve and Eleanor Zissou"
-          />
+          /><br/>
           <TextInput
             label="Shop Bio"
             name="shopBio"
             type="textarea"
             placeholder="Let me tell you about my shop..."
-          />
+          /><br/>
           <TextInput
             label="Avatar"
             name="awsUrl"
             type="text"
             placeholder="http://..../something.png"
-          />
+          /><br/>
           <button type="submit">Submit</button>
         </Form>
       </Formik>
-    </>
+    </div>
   );
 };
 

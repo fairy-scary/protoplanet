@@ -41,7 +41,7 @@ function SignupFormPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-          />
+          /><br/>
         </label>
         <label>
           Username
@@ -50,7 +50,7 @@ function SignupFormPage() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
-          />
+          /><br/>
         </label>
         <label>
           Password
@@ -59,7 +59,7 @@ function SignupFormPage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-          />
+          /><br/>
         </label>
         <label>
           Confirm Password
@@ -68,7 +68,7 @@ function SignupFormPage() {
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
-          />
+          /><br/>
         </label>
         <button type="submit">Sign Up</button>
       </form>

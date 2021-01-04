@@ -18,8 +18,8 @@ const Sidebar = ({isLoaded}) => {
     } else {
       sessionLinks = (
         <>
-          <Link to="/signup">Sign Up</Link>
-          <LoginFormModal />
+          <Link className="menu-item" to="/signup">Sign Up</Link><br/>
+          <LoginFormModal className="log-out" />
         </>
       );
     }

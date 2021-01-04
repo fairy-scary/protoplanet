@@ -3,6 +3,7 @@
 #App {
     font-family: 'Catamaran';
     height: 100vh;
+    background-color: darkslategrey;
   }
 
 #homepage-container{
