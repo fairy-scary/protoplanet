@@ -28,8 +28,8 @@ function reducer(state = initialState, action) {
         return action.payload; 
       default:
         return state;
-    }
-}
+    };
+};
 
 export default reducer
 

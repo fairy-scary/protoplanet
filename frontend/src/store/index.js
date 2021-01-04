@@ -5,7 +5,6 @@ import continents from './continents';
 import shops from './shops';
 import user from './user';
 
-
 const rootReducer = combineReducers({ 
   session,
   continents,

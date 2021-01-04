@@ -16,16 +16,16 @@ export const setMyShop = (payload) => {
     return {
         type: SET_MY_SHOP,
         payload,
-    }
-}
+    };
+};
 
 export const myShopInfo = (userId) => {
     return async (dispatch) => {
         const res = await fetch(`/api/shop/${userId}`);
         dispatch(setMyShop(res.data.myShop));
         console.log(res.data.myShop)
-    }
-}
+    };
+};
 
 export const addShop = (shopData) => {
     return async (dispatch) => {
@@ -34,7 +34,6 @@ export const addShop = (shopData) => {
             body: JSON.stringify(shopData),
         });
         dispatch(setNewShop(shopData))
-        //return await res.json();
     };
 };
 

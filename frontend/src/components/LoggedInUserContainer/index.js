@@ -37,10 +37,11 @@ const LoggedInUserContainer = () => {
             <div>
             <div>
             <Link className="menu-item" to="/admin">Shop Admin</Link> <br/>
-            {/* Ran into db issue with ternery */}
+            {/* Ran into db issue with ternery - tried to convert null db value into boolean */}
             <Link className="menu-item" to="/createShop">Create Shop</Link>
             </div>
             <button onClick={logout} className="log-out">Log Out</button>
+             {/* needs redirect to "/" */}
             </div>
         </div>}
     {!user && <h3>Loading...</h3>}

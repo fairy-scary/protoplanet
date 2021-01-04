@@ -18,19 +18,6 @@ const TextInput = ({ label, ...props }) => {
   );
 };
 
-// const TextAreaInput = ({ label, ...props }) => {
-//   const [field, meta] = useField({props, type: 'textarea'});
-//   return (
-//     <>
-//       <label htmlFor={props.id || props.name}>{label}</label>
-//       <input type="textarea" className="textarea-input" {...field} {...props} />
-//       {meta.touched && meta.error ? (
-//         <div className="error">{meta.error}</div>
-//       ) : null}
-//     </>
-//   );
-// };
-
 
 const CreateShopFormPage = () => {
   const dispatch = useDispatch();
@@ -86,13 +73,16 @@ const CreateShopFormPage = () => {
             type="textarea"
             placeholder="Let me tell you about my shop..."
           /><br/>
+          {/*needs to be texarea, tried to use textinput as basis, didn't work, had to move on */}
           <TextInput
             label="Avatar"
             name="awsUrl"
             type="text"
             placeholder="http://..../something.png"
           /><br/>
+          {/*will convert to S3 bucket upload*/}}
           <button type="submit">Submit</button>
+          {/*needs to clear form and redirect to admin*/}
         </Form>
       </Formik>
     </div>
