@@ -1,8 +1,11 @@
 import {useEffect} from "react"; 
 import {useDispatch, useSelector} from "react-redux";
 import {myShopInfo} from "../../store/shops";
-import "../Continents/continents.css"
-import "./shop-admin.css"
+import "../Continents/continents.css";
+import "./shop-admin.css";
+
+// Lots to add - CRUD features, post listing, new post form gateway
+
 const ShopOverview = ({shop}) => {
     
     return (
