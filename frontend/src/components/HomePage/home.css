@@ -7,7 +7,7 @@
   }
 
 #homepage-container{
-    background-image: url("/home/laptop/appacademy/protoplanet/frontend/src/images/spaceback.jpg");
+    background-image: url("../../images/spaceback.jpg");
     background-size: cover;
     height: 100vh;
 }
